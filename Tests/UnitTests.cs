@@ -5,7 +5,7 @@ namespace GithubActionsLab;
 	{
 		// Addition
 		[TestMethod]
-		public void Add_Valid_Patino()
+		public void Add_Valid_Patino_Wachendorf()
 		{
 			Assert.AreEqual(3, Program.Add("1", "2"));
 			Assert.AreEqual(5, Program.Add("3", "2"));
@@ -13,7 +13,7 @@ namespace GithubActionsLab;
 		}
 
 		[TestMethod]
-		public void Add_Invalid_Patino()
+		public void Add_Invalid_Patino_Wachendorf()
 		{
 			Assert.ThrowsException<FormatException>(() => Program.Add("1", "a"));
 			Assert.ThrowsException<FormatException>(() => Program.Add("a", "1"));
@@ -21,7 +21,7 @@ namespace GithubActionsLab;
 		}
 
 		[TestMethod]
-		public void Add_Null_Patino()
+		public void Add_Null_Patino_Wachendorf()
 		{
 			Assert.ThrowsException<ArgumentNullException>(() => Program.Add("1", null));
 			Assert.ThrowsException<ArgumentNullException>(() => Program.Add(null, "1"));
@@ -30,7 +30,7 @@ namespace GithubActionsLab;
 
 		// Subtraction
 		[TestMethod]
-		public void Subtract_Valid_Patino()
+		public void Subtract_Valid_Patino_Wachendorf()
 		{
 			Assert.AreEqual(1, Program.Subtract("3", "2"));
 			Assert.AreEqual(-1, Program.Subtract("2", "3"));
@@ -38,14 +38,14 @@ namespace GithubActionsLab;
 		}
 
 		[TestMethod]
-		public void Subtract_Invalid_Patino()
+		public void Subtract_Invalid_Patino_Wachendorf()
 		{
 			Assert.ThrowsException<FormatException>(() => Program.Subtract("1", "a"));
 			Assert.ThrowsException<FormatException>(() => Program.Subtract("a", "1"));
 		}
 
 		[TestMethod]
-		public void Subtract_Null_Patino()
+		public void Subtract_Null_Patino_Wachendorf()
 		{
 			Assert.ThrowsException<ArgumentNullException>(() => Program.Subtract("1", null));
 			Assert.ThrowsException<ArgumentNullException>(() => Program.Subtract(null, "1"));
@@ -53,7 +53,7 @@ namespace GithubActionsLab;
 
 		// Multiplication
 		[TestMethod]
-		public void Multiply_Valid_Patino()
+		public void Multiply_Valid_Patino_Wachendorf()
 		{
 			Assert.AreEqual(6, Program.Multiply("3", "2"));
 			Assert.AreEqual(0, Program.Multiply("0", "5"));
@@ -61,14 +61,14 @@ namespace GithubActionsLab;
 		}
 
 		[TestMethod]
-		public void Multiply_Invalid_Patino()
+		public void Multiply_Invalid_Patino_Wachendorf()
 		{
 			Assert.ThrowsException<FormatException>(() => Program.Multiply("1", "a"));
 			Assert.ThrowsException<FormatException>(() => Program.Multiply("a", "1"));
 		}
 
 		[TestMethod]
-		public void Multiply_Null_Patino()
+		public void Multiply_Null_Patino_Wachendorf()
 		{
 			Assert.ThrowsException<ArgumentNullException>(() => Program.Multiply("1", null));
 			Assert.ThrowsException<ArgumentNullException>(() => Program.Multiply(null, "1"));
@@ -76,7 +76,7 @@ namespace GithubActionsLab;
 
 		// Division
 		[TestMethod]
-		public void Divide_Valid_Patino()
+		public void Divide_Valid_Patino_Wachendorf()
 		{
 			Assert.AreEqual(2, Program.Divide("6", "3"));
 			Assert.AreEqual(0, Program.Divide("0", "5"));
@@ -84,7 +84,7 @@ namespace GithubActionsLab;
 		}
 
 		[TestMethod]
-		public void Divide_DivideByZero()
+		public void Divide_DivideByZero_Wachendorf()
 		{
 			// C# floating point division by zero does not throw; it returns Infinity or NaN
 			Assert.IsTrue(double.IsPositiveInfinity(Program.Divide("1", "0")));
@@ -92,14 +92,14 @@ namespace GithubActionsLab;
 		}
 
 		[TestMethod]
-		public void Divide_Invalid_Patino()
+		public void Divide_Invalid_Patino_Wachendorf()
 		{
 			Assert.ThrowsException<FormatException>(() => Program.Divide("1", "a"));
 			Assert.ThrowsException<FormatException>(() => Program.Divide("a", "1"));
 		}
 
 		[TestMethod]
-		public void Divide_Null_Patino()
+		public void Divide_Null_Patino_Wachendorf()
 		{
 			Assert.ThrowsException<ArgumentNullException>(() => Program.Divide("1", null));
 			Assert.ThrowsException<ArgumentNullException>(() => Program.Divide(null, "1"));
@@ -107,7 +107,7 @@ namespace GithubActionsLab;
 
 		// Power
 		[TestMethod]
-		public void Power_Valid_Patino()
+		public void Power_Valid_Patino_Wachendorf()
 		{
 			Assert.AreEqual(8, Program.Power("2", "3"));
 			Assert.AreEqual(1, Program.Power("5", "0"));
@@ -115,14 +115,14 @@ namespace GithubActionsLab;
 		}
 
 		[TestMethod]
-		public void Power_Invalid_Patino()
+		public void Power_Invalid_Patino_Wachendorf()
 		{
 			Assert.ThrowsException<FormatException>(() => Program.Power("1", "a"));
 			Assert.ThrowsException<FormatException>(() => Program.Power("a", "1"));
 		}
 
 	[TestMethod]
-	public void Power_Null_Patino()
+	public void Power_Null_Patino_Wachendorf()
 	{
 		Assert.ThrowsException<ArgumentNullException>(() => Program.Power("1", null));
 		Assert.ThrowsException<ArgumentNullException>(() => Program.Power(null, "1"));
